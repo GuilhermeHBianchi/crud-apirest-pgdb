@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* Saída e Módulos */
+    "target": "ES2020",                  /* Versão estável suportada pelo Jest */
+    "module": "commonjs",                /* Jest funciona melhor com CommonJS */
+    "moduleResolution": "node",          /* Resolve módulos no estilo Node clássico */
+    "outDir": "./dist-tests",            /* Pasta de saída para testes compilados */
+    "rootDir": "./src",                  /* Pasta de origem do código */
+
+    /* Rigor e Segurança */
+    "strict": true,                      /* Ativa modo estrito */
+    "esModuleInterop": true,             /* Permite importar libs CommonJS (como Express) */
+    "isolatedModules": true,             /* Garante compilação isolada */
+    "skipLibCheck": true,                /* Ignora checagem de tipos em node_modules */
+    "forceConsistentCasingInFileNames": true,
+
+    /* Configurações Extras */
+    "sourceMap": true,                   /* Gera Source Maps para depuração */
+    "noEmit": true,                      /* Não gera saída JS ao rodar testes */
+    "noUncheckedIndexedAccess": true,    /* Segurança extra em arrays/objetos */
+    "noUnusedLocals": true,              /* Avisa sobre variáveis não usadas */
+    "noUnusedParameters": true,          /* Avisa sobre parâmetros não usados */
+
+    /* Tipos para Jest */
+    "types": ["jest", "node"]            /* Tipos necessários para Jest e Node */
+  },
+  "include": ["src", "tests"],           /* Inclui código e testes */
+  "exclude": ["node_modules", "dist"]
+}

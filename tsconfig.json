@@ -4,26 +4,17 @@
     "experimentalSpecifierResolution": "node"
   },
   "compilerOptions": {
-    /* Módulos e Saída */
-    "target": "esnext",                /* Versão de JS de saída: moderna e compatível com Node.js atual. */
-    "module": "NodeNext",               /* Sistema de módulos: essencial para usar "import/export" no Node.js. */
-    "moduleResolution": "NodeNext",     /* Como o TS resolve o caminho dos imports (usa a lógica do Node moderno). */
-    "outDir": "./dist",                 /* Pasta para onde o JS transpilado será enviado. */
-    "rootDir": "./src",                 /* Pasta onde estão seus arquivos-fonte (.ts). */
-    
-    /* Rigor e Segurança */
-    "strict": true,                     /* Ativa o modo estrito (inclui noImplicitAny, strictNullChecks, etc.). */
-    "esModuleInterop": true,            /* Permite importar libs CommonJS (como o Express) usando "import". */
-    "isolatedModules": true,            /* Garante que cada arquivo possa ser compilado isoladamente (bom para bundlers). */
-    "skipLibCheck": true,               /* Pula a verificação de tipos das libs em node_modules (mais rápido e menos erros de terceiros). */
-    "forceConsistentCasingInFileNames": true, /* Garante que as letras maiúsculas/minúsculas nos nomes de arquivos sejam consistentes. */
-    
-    /* Configurações Extras */
-    "sourceMap": true,                  /* Gera Source Maps para depuração. */
-    "verbatimModuleSyntax": false,       /* **Recomendado:** Preserva a sintaxe exata dos imports/exports para máxima compatibilidade. */
-    "noEmit": false,                    /* Garante que o compilador gere arquivos JS de saída. */
-    "noUncheckedIndexedAccess": true,   /* Aumenta a segurança ao acessar elementos de arrays e objetos. */
-    "noUnusedLocals": true,             /* Avisa sobre variáveis locais que não estão sendo usadas. */
-    "noUnusedParameters": true          /* Avisa sobre parâmetros de função que não estão sendo usados. */
-  }
+    "target": "ES2020",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
