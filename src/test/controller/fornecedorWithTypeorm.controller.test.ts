@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import fornecedorController from "../../controllers/fornecedor.controller.js";
-import fornecedorRepository from "../../repository/fornecedor.repository.js";
+import fornecedorController from "../../controllers/fornecedor.controller.ts";
+import fornecedorRepository from "../../repository/fornecedor.repository.ts";
 
 jest.mock("../../repository/fornecedor.repository", () => ({
   __esModule: true,

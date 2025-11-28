@@ -1,4 +1,4 @@
-import { Fornecedor } from './fornecedor.model.js';
+import { Fornecedor } from './fornecedor.model.ts';
 
 export interface Produto {
     id: number;

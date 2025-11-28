@@ -2,8 +2,8 @@
   "compilerOptions": {
     /* Saída e Módulos */
     "target": "ES2020",                  /* Versão estável suportada pelo Jest */
-    "module": "commonjs",                /* Jest funciona melhor com CommonJS */
-    "moduleResolution": "node",          /* Resolve módulos no estilo Node clássico */
+    "module": "nodenext",                /* Jest funciona melhor com CommonJS */
+    "moduleResolution": "nodenext",          /* Resolve módulos no estilo Node clássico */
     "outDir": "./dist-tests",            /* Pasta de saída para testes compilados */
     "rootDir": "./src",                  /* Pasta de origem do código */
 
@@ -20,6 +20,9 @@
     "noUncheckedIndexedAccess": true,    /* Segurança extra em arrays/objetos */
     "noUnusedLocals": true,              /* Avisa sobre variáveis não usadas */
     "noUnusedParameters": true,          /* Avisa sobre parâmetros não usados */
+
+    /*Configuração que faz funcionar os .ts*/
+    
 
     /* Tipos para Jest */
     "types": ["jest", "node"]            /* Tipos necessários para Jest e Node */

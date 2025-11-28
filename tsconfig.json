@@ -14,6 +14,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    /*Configuração que faz funcionar os .ts*/
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

@@ -1,5 +1,5 @@
-import pool from '../config/db.js';
-import { Fornecedor, FornecedorCreate, FornecedorUpdate } from '../models/fornecedor.model.js';
+import pool from '../config/db.ts';
+import { Fornecedor, FornecedorCreate, FornecedorUpdate } from '../models/fornecedor.model.ts';
 
 export class FornecedorRepository {
     async create(fornecedorData: FornecedorCreate): Promise<Fornecedor> {

@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import produtoController from "../../controllers/produto.controller.js";
-import produtoRepository from "../../repository/produto.repository.js";
+import produtoController from "../../controllers/produto.controller.ts";
+import produtoRepository from "../../repository/produto.repository.ts";
 
-jest.mock("../../repository/produto.repository", () => ({
+jest.mock("../../repository/produto.repository.ts", () => ({
   __esModule: true,
   default: {
     create: jest.fn(),
@@ -15,7 +15,7 @@ jest.mock("../../repository/produto.repository", () => ({
   },
 }));
 
-jest.mock("../../repository/fornecedor.repository", () => ({
+jest.mock("../../repository/fornecedor.repository.ts", () => ({
   __esModule: true,
   default: { findById: jest.fn() },
 }));
@@ -81,7 +81,7 @@ describe("ProdutoController", () => {
     });
 
     it("retorna 400 se fornecedor não existir", async () => {
-      const fornecedorRepository = (await import("../../repository/fornecedor.repository.js")).default;
+      const fornecedorRepository = (await import("../../repository/fornecedor.repository.ts")).default;
       (fornecedorRepository.findById as jest.Mock).mockResolvedValue(null);
 
       const { req, res } = mockRequestResponse({
@@ -95,7 +95,7 @@ describe("ProdutoController", () => {
     });
 
     it("cria produto com sucesso", async () => {
-      const fornecedorRepository = (await import("../../repository/fornecedor.repository.js")).default;
+      const fornecedorRepository = (await import("../../repository/fornecedor.repository.ts")).default;
       (fornecedorRepository.findById as jest.Mock).mockResolvedValue({ id: 1 });
 
       (produtoRepository.create as jest.Mock).mockResolvedValue({ id: 1, nome: "Teste" });
@@ -116,7 +116,7 @@ describe("ProdutoController", () => {
     it("retorna 500 em caso de exceção", async () => {
       (produtoRepository.create as jest.Mock).mockRejectedValue(new Error("DB error"));
 
-      const fornecedorRepository = (await import("../../repository/fornecedor.repository.js")).default;
+      const fornecedorRepository = (await import("../../repository/fornecedor.repository.ts")).default;
       (fornecedorRepository.findById as jest.Mock).mockResolvedValue({ id: 1 });
 
       const { req, res } = mockRequestResponse({

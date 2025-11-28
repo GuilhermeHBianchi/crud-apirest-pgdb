@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import fornecedorRepository from '../repository/fornecedor.repository.js';
-import { FornecedorCreate, FornecedorUpdate } from '../models/fornecedor.model.js';
+import fornecedorRepository from '../repository/fornecedor.repository.ts';
+import { FornecedorCreate, FornecedorUpdate } from '../models/fornecedor.model.ts';
 
 export class FornecedorController {
     async createFornecedor(req: Request, res: Response) {

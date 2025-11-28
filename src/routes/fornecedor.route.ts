@@ -1,6 +1,6 @@
 import express from 'express';
-import fornecedorController from '../controllers/fornecedor.controller.js';
-import { authenticateToken } from '../middleware/auth.middleware.js';
+import fornecedorController from '../controllers/fornecedor.controller.ts';
+import { authenticateToken } from '../middleware/auth.middleware.ts';
 
 const router = express.Router();
 

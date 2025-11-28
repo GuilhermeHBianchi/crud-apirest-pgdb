@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import userRepository from '../repository/user.repository.js';
-import { UserCreate, UserLogin } from '../models/user.model.js';
+import userRepository from '../repository/user.repository.ts';
+import { UserCreate, UserLogin } from '../models/user.model.ts';
 import jwt from 'jsonwebtoken';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'seu-secret-key-aqui-mude-em-producao';

@@ -1,5 +1,5 @@
-import pool from '../config/db.js';
-import { User, UserCreate } from '../models/user.model.js';
+import pool from '../config/db.ts';
+import { User, UserCreate } from '../models/user.model.ts';
 import bcrypt from 'bcrypt';
 
 export class UserRepository {

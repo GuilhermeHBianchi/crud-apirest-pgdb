@@ -1,5 +1,5 @@
-import pool from '../config/db.js';
-import { Produto, ProdutoCreate, ProdutoUpdate } from '../models/produto.model.js';
+import pool from '../config/db.ts';
+import { Produto, ProdutoCreate, ProdutoUpdate } from '../models/produto.model.ts';
 
 export class ProdutoRepository {
     async create(produtoData: ProdutoCreate): Promise<Produto> {

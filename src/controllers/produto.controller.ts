@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import produtoRepository from '../repository/produto.repository.js';
-import { ProdutoCreate, ProdutoUpdate } from '../models/produto.model.js';
+import produtoRepository from '../repository/produto.repository.ts';
+import { ProdutoCreate, ProdutoUpdate } from '../models/produto.model.ts';
 
 export class ProdutoController {
     async createProduto(req: Request, res: Response) {
@@ -43,7 +43,7 @@ export class ProdutoController {
             }
 
             // Verifica se o fornecedor existe
-            const fornecedorRepository = (await import('../repository/fornecedor.repository.js')).default;
+            const fornecedorRepository = (await import('../repository/fornecedor.repository.ts')).default;
             const fornecedor = await fornecedorRepository.findById(produtoData.fornecedor_id);
             if (!fornecedor) {
                 return res.status(400).json({ error: 'Fornecedor não encontrado' });
@@ -115,7 +115,7 @@ export class ProdutoController {
 
             // Verifica se o fornecedor existe (se fornecido)
             if (produtoData.fornecedor_id) {
-                const fornecedorRepository = (await import('../repository/fornecedor.repository.js')).default;
+                const fornecedorRepository = (await import('../repository/fornecedor.repository.ts')).default;
                 const fornecedor = await fornecedorRepository.findById(produtoData.fornecedor_id);
                 if (!fornecedor) {
                     return res.status(400).json({ error: 'Fornecedor não encontrado' });
