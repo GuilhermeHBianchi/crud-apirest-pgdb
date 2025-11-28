@@ -1,9 +1,9 @@
 import express, { Response } from 'express';
 import cors from 'cors';
-import userRouter from './routes/user.route';
-import fornecedorRouter from './routes/fornecedor.route';
-import produtoRouter from './routes/produto.route';
-import pool from './config/db';
+import userRouter from './routes/user.route.ts';
+import fornecedorRouter from './routes/fornecedor.route.ts';
+import produtoRouter from './routes/produto.route.ts';
+import pool from './config/db.ts';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
